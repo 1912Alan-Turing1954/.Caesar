@@ -47,11 +47,9 @@ body {
     transform: scale(1.5);
 }
 
-.para {
-    display: block;
-    align-items: center;
-    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-}
+.text-js{
+    
+  }
 
 
 
