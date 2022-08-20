@@ -1,4 +1,6 @@
-var rot = 10;
+
+
+var rot = 13;
 var temp = 0;
 var minCharCode = 65;
 var maxCharCode = 90;
