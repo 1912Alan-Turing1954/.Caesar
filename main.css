@@ -10,11 +10,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* grid-template-columns: 100px 100px 100px;
-    grid-template-rows: auto; */
     box-sizing: border-box;
     width: 50%;
-    /* height: 100%; */
     margin-left: auto;
     margin-right: auto;
     background:gray;
@@ -45,11 +42,43 @@ body {
     flex-direction: row;
     gap: 10px;
     transform: scale(1.5);
+    width: 300px;
+    min-height:10px;
+    max-height: 50px;
+    overflow:auto;
+    margin-top: 15px;
+    
 }
 
-.text-js{
-    
-  }
+.text-js {
+    display: flex;
+    padding-left: 2px;
+    align-items: center;
+    width: 60%;
+    animation: typing 3s steps(44), blink 0.5s step-end infinite alternate;
+    white-space: nowrap; 
+    overflow: hidden;
+    border-right: 3px solid black;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1em;
+    justify-content: center;
+    transform: translateY(40px);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
 
 
 
