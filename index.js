@@ -1,5 +1,3 @@
-
-
 var rot = 13;
 var temp = 0;
 var minCharCode = 65;
