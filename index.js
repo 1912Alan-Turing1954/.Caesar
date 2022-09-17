@@ -1,29 +1,66 @@
-var rot = 13;
-var temp = 0;
-var minCharCode = 65;
-var maxCharCode = 90;
+const wirePairs = {
+  a: 0,
+  b: 1,
+  c: 2,
+  d: 3, 
+  e: 4, 
+  f: 5,
+  g: 6,
+  h: 7,
+  i: 8,
+  j: 9,
+  k: 10,
+  l: 11,
+  m: 12, 
+  n: 13,
+  o: 14,
+  p: 15,
+  q: 16,
+  r: 17,
+  s: 18,
+  t: 19,
+  u: 20,
+  v: 21,
+  w: 22,
+  x: 23,
+  y: 24,
+  z: 25,
+};
 
-function rot13() {
+const alphabet = {
+  0: 'a',
+  1: 'b',
+  2: 'c',                        
+  3: 'd',
+  4: 'e', 
+  5: 'f',
+  6: 'g',
+  7: 'h',
+  8: 'i',
+  9: 'j',
+  10: 'k',
+  11: 'l', 
+  12: 'm', 
+  13: 'n',
+  14: 'o',
+  15: 'p',
+  16: 'q',
+  17: 'r',
+  18: 's',
+  19: 't',
+  20: 'u',
+  21: 'v',
+  22: 'w',
+  23: 'x',
+  24: 'y',
+  25: 'z', 
+};
+
+function rot13(secretLetter) {
   var secretLetter = document.getElementById("decoded").value;
-  var codeArr = secretLetter.split("");  // String to Array
-  var decodedArr = []; 
+  
+  var codeArr = secretLetter.  // String to Array
 
-   for (var i = 0; i < secretLetter.length; i++){
-  	codeArr[i] = codeArr[i].toUpperCase();
-    var charCode = codeArr[i].charCodeAt(0);
-
-    if (codeArr[i].charCodeAt(0) >= minCharCode && codeArr[i].charCodeAt(0)  <= maxCharCode) {
-      var modified = charCode + rot;
-      if(modified > maxCharCode){
-          temp = modified - maxCharCode-1;
-          modified = minCharCode + temp;
-      }
-      var convertedChar = String.fromCharCode(modified);
-      decodedArr[i] = convertedChar;
-    } else {
-      decodedArr[i] = codeArr[i];
-    }
-  }
   
   var arr = decodedArr.join(""); // Array to String
   document.getElementById("encoded").value = arr;
