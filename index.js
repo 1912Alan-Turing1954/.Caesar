@@ -65,8 +65,8 @@ let originalMessage = originalInput.value;
 
   function characterEntered(e) {
   originalMessage = e.target.value;
-  originalMessage = originalMessage.toLowerCase();
-  originalMessage = originalMessage.replace(/[^a-z]/, '');
+  originalMessage = originalMessage.toUpperCase();
+  originalMessage = originalMessage.replace(/[^A-Z]/, '');
 
   e.target.value = originalMessage;
 
@@ -76,7 +76,7 @@ let originalMessage = originalInput.value;
 function rot13() {
   let shift = shiftInput.value ? Number(shiftInput.value) : 0;
   
-  var codeArr = originalMessage;  // String to Array
+  var codeArr = originalMessage.toLowerCase();  // String to Array
 
   var encodedArr = codeArr.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
@@ -86,6 +86,6 @@ function rot13() {
     return answer;
   })
 
-  var arr = encodedArr2.map(el => alphabet[el]).join(""); // Array to String
+  var arr = encodedArr2.map(el => alphabet[el]).join("").toUpperCase(); // Array to String
   document.getElementById("output").value = arr;
 }
