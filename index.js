@@ -56,12 +56,36 @@ const alphabet = {
   25: 'z', 
 };
 
-function rot13(secretLetter) {
-  var secretLetter = document.getElementById("decoded").value;
-  
-  var codeArr = secretLetter.  // String to Array
+let originalInput = document.querySelector("#input");
+let shiftInput = document.querySelector("#shift");
 
+let originalMessage = originalInput.value;
+  originalInput.addEventListener("input", characterEntered, false);
+  shiftInput.addEventListener("input", numberEntered, false);
+
+  function characterEntered(e) {
+  originalMessage = e.target.value;
+  originalMessage = originalMessage.toLowerCase();
+  originalMessage = originalMessage.replace(/[^a-z]/, '');
+
+  e.target.value = originalMessage;
+
+  // rot13(); change later.
+}
+
+function rot13() {
+  let shift = shiftInput.value ? Number(shiftInput.value) : 0;
   
-  var arr = decodedArr.join(""); // Array to String
-  document.getElementById("encoded").value = arr;
+  var codeArr = originalMessage;  // String to Array
+
+  var encodedArr = codeArr.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
+
+  var encodedArr2 = encodedArr.map(el => {
+    let spindle = (el + shift) % 26;
+    let answer = spindle;
+    return answer;
+  })
+
+  var arr = encodedArr2.map(el => alphabet[el]).join(""); // Array to String
+  document.getElementById("output").value = arr;
 }
