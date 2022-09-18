@@ -70,7 +70,7 @@ let originalMessage = originalInput.value;
 
   e.target.value = originalMessage;
 
-  // rot13(); change later.
+  rot13(); 
 }
 
 function rot13() {
