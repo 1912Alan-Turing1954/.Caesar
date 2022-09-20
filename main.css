@@ -46,7 +46,7 @@ html {
 	overflow: hidden;
 	border-right: .05em solid black;
 	white-space: nowrap;
-	animation: typing 1s steps(20, end) forwards;
+	animation: typing 1s steps(20, end) forwards, blink .8s infinite;
 	font-size: 3.0rem;
 	width: 0;
 }
@@ -55,6 +55,11 @@ html {
 	from { width: 0 }
 	to { width: 100% }
 }
+
+@keyframes blink {
+	from, to { border-color: transparent; }
+	50% {border-color: black;}
+};
 
 
 
