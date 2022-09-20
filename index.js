@@ -70,10 +70,14 @@ let originalMessage = originalInput.value;
 
   e.target.value = originalMessage;
 
-  rot13(); 
+  ceasar(); 
 }
 
-function rot13() {
+function numberEntered() {
+  ceasar();
+}
+
+function ceasar() {
   let shift = shiftInput.value ? Number(shiftInput.value) : 0;
   
   var codeArr = originalMessage.toLowerCase();  // String to Array
