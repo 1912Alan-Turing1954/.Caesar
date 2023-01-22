@@ -55,5 +55,3 @@ const alphabet = {
     24: 'y',
     25: 'z', 
 };
-
-export default { wirePairs, alphabet };
