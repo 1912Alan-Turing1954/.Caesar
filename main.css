@@ -1,5 +1,5 @@
 html {
-    background-color: burlywood;
+    background-color: #303030;
 }
 
 #shift {
@@ -42,9 +42,9 @@ html {
 }
 
 #container p {
-	color: black;
+	color: whitesmoke;
 	overflow: hidden;
-	border-right: .05em solid black;
+	border-right: .05em solid whitesmoke;
 	white-space: nowrap;
 	animation: typing 1s steps(20, end) forwards, blink .8s infinite;
 	font-size: 3.0rem;
@@ -58,7 +58,7 @@ html {
 
 @keyframes blink {
 	from, to { border-color: transparent; }
-	50% {border-color: black;}
+	50% {border-color: whitesmoke;}
 };
 
 
