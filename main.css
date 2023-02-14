@@ -58,16 +58,17 @@ h2 {
 }
 
 header ion-icon {
-	transform: scale(3);
+	transform: scale(2);
 	color: black;
-	gap: 5em;
+	padding: 1em;
 }
 
 header {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-direction: row;
+	gap: 2em;
 }
 
 
