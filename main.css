@@ -1,67 +1,74 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Times New Roman', Times, serif;
+}
+
 html {
-    background-color: #303030;
+    background-color: #af8a51;
 }
 
-#shift {
-    outline: none;
+
+h2 {
+	font-size: 3em;
 }
 
-#btn {
-    width: 100px;
-    height: 50px;
-    outline: none;
-}
 
-#shift {
-    width: 50px;
-    height: 45px;
-    font-size: large;
-}
-
-#input {
+.container {
 	display: flex;
-	height: 100px; 
-	outline: none;
-	font-size: xx-large;
 	justify-content: center;
-	font-family: Courier New;
+	align-items: center;
+	padding-top: 10em;
 }
 
+#shift, #output, #btn, #input{
+    outline: none;
+	border: none;
+}
 
-#output {
+.main {
 	display: flex;
-	height: 100px; 
-	outline: none;
-	font-size: xx-large;
 	justify-content: center;
-	font-family: Courier New;
+	align-items: center;
+	flex-direction: column;
+	margin: 1em;
+	font-size: 2em;
 }
 
-#container {
-	display: inline-block;
+#input, #output {
+	padding: 1em;
+	border-radius: 1.3em;
 }
 
-#container p {
-	color: whitesmoke;
-	overflow: hidden;
-	border-right: .05em solid whitesmoke;
-	white-space: nowrap;
-	animation: typing 1s steps(20, end) forwards, blink .8s infinite;
-	font-size: 3.0rem;
-	width: 0;
+.buttons {
+	grid-template-columns: 2fr 2fr;
+	padding: 1em;
 }
 
-@keyframes typing {
-	from { width: 0 }
-	to { width: 100% }
+.buttons #btn, #shift {
+	padding: 0.5em;
+	border-radius: 1.3em;
+	font-size: 0.5em;
 }
 
-@keyframes blink {
-	from, to { border-color: transparent; }
-	50% {border-color: whitesmoke;}
-};
+#btn:active {
+	background-color: white;
+	box-shadow: 1px 5px 3px black;
+	transform: translateY(4px);
+}
 
+header ion-icon {
+	transform: scale(3);
+	color: black;
+	gap: 5em;
+}
 
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
 
 
 

@@ -3,26 +3,59 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Caesar Cipher</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./main.css">
     </head>
-    <body>    
-        <center>
-            <div id="container">
-                <p>Caesar Cipher</p>
+    <body>   
+        <header>
+            <a href="https://www.linkedin.com/in/loagnm/"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="https://github.com/1912Alan-Turing1954"><ion-icon name="logo-github"></ion-icon></a>
+        </header>
+        
+
+        <div class="container">
+            <h2><span class="title"></span></h2>
+        </div>
+            
+        <div class="main">
+            <input id="input" placeholder="Enter text here...">
+            
+            <div class="buttons">
+                <input type="number" id="shift" max="26" min="1" placeholder="0"></input>
+                <button type="button" id="btn" onclick="copy()">Copy Encoded</button>
             </div>
-        </center>
-        <center>
-            <label for="input">Plaintext</label>
-            <input id="input"></br><br>
-            <label for="shift">Shift</label>
-            <input type="number" id="shift" max="26" min="1" placeholder="0"></input>
-            <button type="button" id="btn" onclick="ceasar()">Encrypt</button><br><br>
-		    <label for="output">Encoded</label>
-            <input id="output">
-        </center>
+            
+            <input id="output" placeholder="Encoded text appears here...">
+        </div>
+
         <script type="text/javascript" src="index.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            var typed = new Typed('.title', {
+                strings: ['Caesar Cipher', 'Encryption', 'Decryption'],
+                typeSpeed: 150,
+                backSpeed: 150,
+                loop: true
+            });
+        </script>
+        <script>
+            function copy() {
+                // Get the text field
+                var copyText = document.getElementById("output");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied the text: " + copyText.value);
+            }
+        </script>
     </body>
 </html>
