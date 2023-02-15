@@ -24,6 +24,7 @@ h2 {
 #shift, #output, #btn, #input{
     outline: none;
 	border: none;
+	font-size: 1.2em;
 }
 
 .main {
@@ -32,7 +33,6 @@ h2 {
 	align-items: center;
 	flex-direction: column;
 	margin: 1em;
-	font-size: 2em;
 }
 
 #input, #output {
@@ -48,7 +48,6 @@ h2 {
 .buttons #btn, #shift {
 	padding: 0.5em;
 	border-radius: 1.3em;
-	font-size: 0.5em;
 }
 
 #btn:active {
